@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # challenge
 
 > A Vue.js project
@@ -25,3 +26,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# Front-end-Challenge
+>>>>>>> 33e69fbedb45a977e3d8481655afb7b7e8ac37c4
