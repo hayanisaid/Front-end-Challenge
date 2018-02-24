@@ -50,16 +50,56 @@
           </ul>
         </div>
       </div>
-      <div class="col-lg-12 col-md-12">
-        <div class="btn_follow">
+      <div class="col-lg-12 col-md-12 btn_follow">
         <button class="btn btn-default btn-lg">Follow</button>
         <span>
           <i class="material-icons">settings</i>
         </span>
       </div>
       </div>
-      </div>
      </div>
+     <!-- navs -->
+     <div class="col-lg-3 col-md-3 navs">
+       <a href="#" class="nav-link">popular <i class="material-icons">expand_more</i></a>
+     </div>
+     <div class="col-lg-6 col-md-6 navs">
+       <ul class="list-inline">
+         <li class="list-inline-item"><a class="nav-link" href="#">affordable</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">fanacy</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">tips</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">community</a></li>
+       </ul>
+     </div>
+     <div class="header-mobile " hidden>
+     <div class=" col-sm-12 col-md-12 ">
+       <div class="header_mobile_top_right">
+       <div class="avatar">
+         <img src="../assets/images/image2.png" class="img-fluid">
+       </div>
+       <div class="note">
+          <i class="material-icons">notifications</i>
+          <i class="material-icons">favorite</i>
+          <a class="dropdown" data-toggle="dropdown" href="#">
+          <i class="material-icons" aria-hidden="true">expand_more</i></a>
+       </div>
+          <ul class="list-unstyled dropdown-menu">
+          <li><a href="">Profile <i class="material-icons">person</i></a></li>
+          <li><a href="">My cart <i class="material-icons"></i></a></li>
+          <li><a href="">Setting <i class="material-icons">settings</i></a></li>
+          <li><a href="">Logout <i class="material-icons"></i></a></li>
+          </ul>
+     <div class=" navs">
+       <ul class="list-inline">
+         <li><a href="#" class="nav-link">popular <i class="material-icons">expand_more</i></a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">affordable</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">fanacy</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">tips</a></li>
+         <li class="list-inline-item"><a class="nav-link" href="#">community</a></li>
+       </ul>
+     </div>
+        </div>
+     </div>
+   </div>
    </div>
    </div><!-- end header -->
 </div>
