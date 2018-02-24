@@ -4,7 +4,7 @@
    <div class="header">
    <div class="overlay"></div>
    <div class="row">
-     <div class="col-lg-2 col-md-2 col-sm-12 first">
+     <div class="col-lg-2 col-md-3 col-sm-12 first">
       <div class="logo">
         <h3>idea<span>date</span></h3>
       </div>
@@ -33,7 +33,7 @@
                     </div>
         </div>
      </div>
-     <div class="col-lg-4 col-md-4 col-sm-12">
+     <div class="col-lg-4 col-md-3 col-sm-12">
       <div class="row">
       <div class="col-lg-12 col-md-12">
         <div class="header_top_right float-right">
@@ -102,6 +102,38 @@
    </div>
    </div>
    </div><!-- end header -->
+   <div class="products"><!-- main page -->
+     <div class="row">
+       <div class="col-lg-8 col-md-8 col-sm-12">
+         <div class="row">
+           <div class="col-lg-4 col-md-4 col-sm-12 product">
+             <div class="item">
+               <div class="overlay"></div>
+                 <i class="material-icons">favorite_border</i>
+                 <img src="../assets/images/product2.png" class="img-fluid">
+             </div>
+            <div class="reviews">
+            <h4>Jean-Gearges <i class="material-icons">star_border</i> <span>5.2</span></h4>
+            <span class="review">3531k like</span>
+            </div>
+           </div>
+
+         </div>
+       </div>
+       <div class="col-lg-4 col-md-4 col-sm-12">
+         Here map
+       </div>
+     </div>
+   </div>
+     <!-- start footer -->
+  <div class="footer">
+     <div class="container">
+       <div class="pull-left logo">
+      <h3>idea<span>date</span></h3>
+     </div>
+     </div>
+  </div>
+  <!-- End footer -->
 </div>
 </template>
 
