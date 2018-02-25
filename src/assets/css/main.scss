@@ -110,6 +110,12 @@ $whiteColor: #f4f4f4;
 	margin: auto;
 
 	}
+
+	/* IPad */
+	@media(min-width:768px)and(max-width:1024px){
+		width: 11em;
+		height: 11em;
+	    }
 	
 		}
 		
@@ -357,20 +363,25 @@ margin-bottom: 20px;
 
 		height: 287px;
 		transition: all .3s ease-in-out;
-	
+
+		/* Ipad */
+	    @media(min-width:768px)and(max-width:1024px){
+		
+		height: 165px;
+	    }
 		&:hover .overlay,
 		&:hover i{
 		display: block;
 		}
 	.overlay{
 		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		right: 0;
+		width: 254px;
+		height: 287px;
+	    left: 14px;
 		background-color: rgba(20, 16, 16,0.57);
 		display: none;
 		transition: all .3s ease-in-out;
+		border-radius: 6px;
 		
 	}
 		i{
@@ -378,6 +389,7 @@ margin-bottom: 20px;
 			color: #fff;
 			font-size: 30px;
 			display: none;
+			cursor: pointer;
 		}
 		img{
 			width: 100%;

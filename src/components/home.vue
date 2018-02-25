@@ -106,15 +106,15 @@
      <div class="row">
        <div class="col-lg-8 col-md-8 col-sm-12">
          <div class="row">
-           <div class="col-lg-4 col-md-4 col-sm-12 product">
+           <div class="col-lg-4 col-md-4 col-sm-12 product" v-for="(data,index) in products" :key="index">
              <div class="item">
                <div class="overlay"></div>
-                 <i class="material-icons">favorite_border</i>
-                 <img src="../assets/images/product2.png" class="img-fluid">
+                 <i v-on:click="like(index)" class="material-icons">favorite_border</i>
+                 <img :src="data.image" class="img-fluid">
              </div>
             <div class="reviews">
-            <h4>Jean-Gearges <i class="material-icons">star_border</i> <span>5.2</span></h4>
-            <span class="review">3531k like</span>
+            <h4>{{data.name}} <i class="material-icons">star_border</i> <span>5.2</span></h4>
+            <span class="review">{{data.like}}k like</span>
             </div>
            </div>
 
@@ -139,15 +139,65 @@
 
 <script>
 export default {
+  // eslint-disable-next-line 
+  /* eslint-disable */
   name: 'home',
+  
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      products:[
+       {
+        name:"Asiate",
+        image:require("../assets/images/product1.png"),
+        rate: 5.2,
+        like:4526
+       },
+        {
+        name:"Blue Hill",
+        image:require("../assets/images/product2.png"),
+        rate: 5.1,
+        like:4000
+       },
+        {
+        name:"Jeab-Geaorges",
+        image:require("../assets/images/product3.png"),
+        rate: 5.3,
+        like:4006
+       },
+        {
+        name:"Petrossian",
+        image:require("../assets/images/product4.png"),
+        rate: 5.0,
+        like:670
+       },
+        {
+        name:"ABC kitchen",
+        image:require("../assets/images/product5.png"),
+        rate: 5.5,
+        like:362
+       },
+       {
+        name:"OC",
+        image:require("../assets/images/product6.png"),
+        rate: 5.4,
+        like:3620
+       }
+      ]
+    }
+  },
+  methods:{
+    like(index){
+      for(let i=0; i<=this.products.length; i++){
+        if(index===i){
+          this.products[index].like+=1
+        }
+
+      }
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style>
