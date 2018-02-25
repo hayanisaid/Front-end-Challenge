@@ -109,7 +109,7 @@
            <div class="col-lg-4 col-md-4 col-sm-12 product" v-for="(data,index) in products" :key="index">
              <div class="item">
                <div class="overlay"></div>
-                 <i v-on:click="like(index)" class="material-icons">favorite_border</i>
+                 <i v-on:click="like(index)" v-bind:class={liked:data.isLiked} class="material-icons">favorite_border</i>
                  <img :src="data.image" class="img-fluid">
              </div>
             <div class="reviews">
@@ -151,37 +151,43 @@ export default {
         name:"Asiate",
         image:require("../assets/images/product1.png"),
         rate: 5.2,
-        like:4526
+        like:4526,
+        isLiked:false
        },
         {
         name:"Blue Hill",
         image:require("../assets/images/product2.png"),
         rate: 5.1,
-        like:4000
+        like:4000,
+        isLiked:false
        },
         {
         name:"Jeab-Geaorges",
         image:require("../assets/images/product3.png"),
         rate: 5.3,
-        like:4006
+        like:4006,
+        isLiked:false
        },
         {
         name:"Petrossian",
         image:require("../assets/images/product4.png"),
         rate: 5.0,
-        like:670
+        like:670,
+        isLiked:false
        },
         {
         name:"ABC kitchen",
         image:require("../assets/images/product5.png"),
         rate: 5.5,
-        like:362
+        like:362,
+        isLiked:false
        },
        {
         name:"OC",
         image:require("../assets/images/product6.png"),
         rate: 5.4,
-        like:3620
+        like:3620,
+        isLiked:false
        }
       ]
     }
@@ -190,7 +196,8 @@ export default {
     like(index){
       for(let i=0; i<=this.products.length; i++){
         if(index===i){
-          this.products[index].like+=1
+          this.products[index].like+=1;
+          this.products[index].isLiked=true;
         }
 
       }
@@ -200,6 +207,8 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style>
-
+<style scoped>
+.liked{
+  color: #e33943 !important;
+}
 </style>
