@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# challenge
+# Front-end Challanege
 
 > A Vue.js project
 
