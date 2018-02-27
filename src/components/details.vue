@@ -7,16 +7,29 @@
 			<div v-if="productId===index">
 			<img :src="data.image" class="img-fluid">
 			<div class="product-detail">
-				<h4>{{data.name}}<i class="material-icons">star_border</i> <span>5.2</span></h4>
-			    <p>id:{{productId}}</p>
+			  <div class="controls">
+			  	<h4>{{data.name}}<i class="material-icons">star_border</i> <span>5.2</span></h4>
+				<span class="heart"><i v-bind="{liked:!data.isLiked}" class="material-icons">favorite</i>{{data.like}} Like</span>
+			  </div>
+			  <h4>Description:</h4>
+			    <p>
+			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			    <div class="input-group-prepend">
+					<span class="input-group-text">
+						Amount
+					</span>
+					<input type="number" class="form-control-sm" value="0" name="">
+				</div>
+			    <button class="btn btn-default btn-block">Order</button>
 			</div>
 			</div>
 		
 		</div>
 			
-		</div>
-		<div class="col-lg-7 col-md-8 col-sm-12 product">
-		
 		</div>
 	</div>
 </div>
@@ -33,6 +46,9 @@
 }
 .fadePage-leave-active{
  filter:blur(0);
+}
+.liked{
+	color: red !important;
 }
 </style>
 <script>

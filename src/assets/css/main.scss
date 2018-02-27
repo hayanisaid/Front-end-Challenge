@@ -577,13 +577,59 @@ margin-bottom: 20px;
  /* product detail */
  .product-detail{
 	background: #ffffffa3;
-	position: absolute;
-	/* top: 0; */
+	position: relative;
+	@include box-shadow(0 0 10px #ccc);
 	width: 70%;
-	margin-left: auto;
+	margin-left:(30%) / 2;
 	z-index: 2;
-	bottom: 0%;
+	bottom: 13em;
+	border-radius: 6px;
 	padding: 2em;
+	.controls{
+		display: flex;
+        padding: 1em;
+		h4{
+			font-family: $Raleway;
+			i{
+		    color:#FFCD38;
+		  	}
+		  span{
+		  	color:#FFCD38;
+		  }
+		}
+		.heart{
+		font-family: $Raleway;
+		margin-left: 1em;	
+		}
+	}
+	h4{
+	font-family: $Raleway;	
+	}
+	.input-group-prepend{
+		margin-bottom: 1em;
+		.form-control-sm{
+			width: 4em;
+			&:focus{
+				box-shadow: 0;
+			}
+		}
+		.input-group-text{
+		height: 3em;
+		font-size: 14px;
+		color: #f4f4f4;
+		background: #e33943;
+		font-family: $Raleway;
+		}
+	}
+	
+	.btn-default{
+	background:	#e23943;
+	color: $whiteColor;
+	font-family: $Raleway;
+	&:focus{
+		@include box-shadow(0 0 10px #e23943);
+	}
+	}
  }
 }
 
