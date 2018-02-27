@@ -115,8 +115,15 @@
               <router-view/>
         </div>
        </div>
-       <div class="col-lg-4 col-md-4 col-sm-12">
-       Google map
+       <div class="col-lg-4 col-md-4 col-sm-12 map">
+       <div class="form-search">
+         <div class="btn-group">
+           <button class="btn btn-default btn-sm"><i class="material-icons">add</i></button>
+           <button class="btn btn-default btn-sm"><i class="material-icons">remove</i></button>
+         </div>
+         <input type="text" class="form-control" name="search" placeholder="Search for an address">
+       </div>
+       <img src="./assets/images/map.png" class="img-fluid">
        </div>
      </div>
    </div>
@@ -192,12 +199,5 @@ export default {
   }
 }
 
-/*conponent transition*/
-.fadePage-enter-active{
-  filter:blur(60px);
-  transition: .5s;
-}
-.fadePage-leave-active{
- filter:blur(0);
-}
+
 </style>

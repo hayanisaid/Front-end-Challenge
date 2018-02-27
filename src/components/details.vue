@@ -6,8 +6,10 @@
 		<div v-for="(data,index) in productDetails" :key="index">
 			<div v-if="productId===index">
 			<img :src="data.image" class="img-fluid">
-			<h4>{{data.name}}<i class="material-icons">star_border</i> <span>5.2</span></h4>
-			<p>id:{{productId}}</p>
+			<div class="product-detail">
+				<h4>{{data.name}}<i class="material-icons">star_border</i> <span>5.2</span></h4>
+			    <p>id:{{productId}}</p>
+			</div>
 			</div>
 		
 		</div>
@@ -94,13 +96,6 @@ data(){
         bounceAnimation:false
        }
       ]
-	}
-},
-methods:{
-	fetchData(){
-		for(let i=0; i <= productDetails.length;i++){
-			console.log(productId)
-		}
 	}
 }
 }

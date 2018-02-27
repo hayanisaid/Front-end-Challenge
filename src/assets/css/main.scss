@@ -20,6 +20,13 @@ $whiteColor: #f4f4f4;
 .box-shadow{
 	box-shadow:0 0 10px #ccc;
 }
+@mixin box-shadow($box-shadow) {
+ box-shadow:$box-shadow;
+ -moz-box-shadow:$box-shadow;
+ -webkit-box-shadow:$box-shadow;
+ -ms-box-shadow:$box-shadow;
+ -o-box-shadow:$box-shadow;	
+}
 .home{
 	@media (min-width: 768px) {
 		overflow: hidden;
@@ -335,7 +342,7 @@ $whiteColor: #f4f4f4;
 		display: none;
 	}
 	@media (max-width: 768px) {
-		//width: 100%;
+		
 	}
 	 padding: 2em;
      background: $mainColor;
@@ -409,7 +416,7 @@ margin-bottom: 20px;
 		}
 	.overlay{
 		position: absolute;
-		width: 244px;
+		width: 100%;
 		height: 287px;
 		background-color: rgba(20, 16, 16,0.57);
 		display: none;
@@ -418,7 +425,7 @@ margin-bottom: 20px;
 
 		/* in Mobile */
 		@media (max-width: 768px) {
-			width: 91%;
+			width: 100%;
 		}
 		
 	}
@@ -447,11 +454,15 @@ margin-bottom: 20px;
 			color: #fff;
 			font-size: 30px;
 			cursor: pointer;
+			right: 0;
+			margin: 10px;
+			font-size: 2em
 		}
 		img{
 			width: 100%;
 			border-radius: 6px;
 			height: 100%;
+		    object-fit: cover;
 		}
 
 	}
@@ -460,14 +471,67 @@ margin-bottom: 20px;
 		font-family: $Raleway;
 		color: #000;
 		cursor: pointer;
+		&:hover{
+			color:#e23943;
+		}
 		i{
 		color:#FFCD38;		
 		}
+		span{
+			color:#FFCD38;
+		}
 	}
 	span{
-	font-family: $Raleway, sans-serif;	
+	font-family: $Raleway, sans-serif;
+		
 	}
 	}
+	}
+
+	/* map */
+	.map{
+		position: relative;
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit:cover;
+
+		}
+		.form-search{
+			position: absolute;
+			.btn-group{
+				position: relative;
+				top: 1em;
+				left: 1em;
+				.btn-default{
+					background: #fff;
+					display: block;
+					color:$fontColor;
+					@include box-shadow(0 0 6px #ccc);
+				}
+			}
+			.form-control{
+				position: relative;
+				right: -73px;
+				bottom: 4em;
+				border-radius: 29px;
+				color: $fontColor;
+				width: 19em;
+				padding: 1em;
+
+				font-family: $Raleway;
+				&:focus{
+					outline: none !important;
+					border:0 !important;
+					@include box-shadow(0 0 10px #ccc);
+				}
+			}
+			input[type=text]::placeholder{
+				color: #666;
+				font-family: $Raleway;
+				font-size: 14px;
+			}
+		}
 	}	
  } 
 
@@ -503,6 +567,24 @@ margin-bottom: 20px;
 
 /* detail page style */
 .details{
+ .product{
+ 	img{
+ 		width: 100%;
+ 		border-radius: 6px;
+ 	}
+ }
+
+ /* product detail */
+ .product-detail{
+	background: #ffffffa3;
+	position: absolute;
+	/* top: 0; */
+	width: 70%;
+	margin-left: auto;
+	z-index: 2;
+	bottom: 0%;
+	padding: 2em;
+ }
 }
 
 
