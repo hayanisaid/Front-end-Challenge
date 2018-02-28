@@ -267,6 +267,7 @@ $whiteColor: #f4f4f4;
 			display: flex;
 			justify-content: center;
 			position: relative;
+			padding: 2em;
 			@media (min-width:768px) {
 			 display: flex;
 			justify-content: flex-end;
@@ -426,6 +427,7 @@ margin-bottom: 20px;
 		/* in Mobile */
 		@media (max-width: 768px) {
 			width: 100%;
+			height: 100%
 		}
 		
 	}
@@ -474,6 +476,9 @@ margin-bottom: 20px;
 		&:hover{
 			color:#e23943;
 		}
+		@media (min-width: 768px)and (max-width: 1024px) {
+			font-size: 1em;
+		}
 		i{
 		color:#FFCD38;		
 		}
@@ -491,6 +496,7 @@ margin-bottom: 20px;
 	/* map */
 	.map{
 		position: relative;
+		overflow: hidden;
 		img{
 			height: 100%;
 			width: 100%;
@@ -499,10 +505,14 @@ margin-bottom: 20px;
 		}
 		.form-search{
 			position: absolute;
+			width: 100%;
 			.btn-group{
 				position: relative;
 				top: 1em;
 				left: 1em;
+				@media (min-width: 768px)and (max-width: 1024px) {
+				    left: 4px;
+				}
 				.btn-default{
 					background: #fff;
 					display: block;
@@ -518,8 +528,14 @@ margin-bottom: 20px;
 				color: $fontColor;
 				width: 19em;
 				padding: 1em;
-
 				font-family: $Raleway;
+				@media (max-width: 768px) {
+				width: 100%;	
+				}
+				@media (min-width: 768px)and (max-width: 1024px) {
+				width: 10em;
+				right: -3em;
+				}
 				&:focus{
 					outline: none !important;
 					border:0 !important;
@@ -567,6 +583,7 @@ margin-bottom: 20px;
 
 /* detail page style */
 .details{
+	width: 100%;
  .product{
  	img{
  		width: 100%;

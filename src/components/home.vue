@@ -96,7 +96,7 @@ export default {
     },
     toDetail(index){
       const userId=index;
-      this.$router.push({name:'details' ,params:{id:userId}})
+      this.$router.push({name:'details' ,params:{Productid:userId}})
       //console.log(index)
     }
   }

@@ -2,7 +2,7 @@
 <transition name="fadePage">
 		<div class="details">
 	<div class="row">
-		<div class="col-lg-12 col-md-4 col-sm-12 product">
+		<div class="col-lg-12 col-md-12 col-sm-12 product">
 		<div v-for="(data,index) in productDetails" :key="index">
 			<div v-if="productId===index">
 			<img :src="data.image" class="img-fluid">
@@ -57,7 +57,7 @@ export default{
 name:"details",
 data(){
 	return{
-	 productId:this.$route.params.id,
+	 productId:this.$route.params.Productid,
 	 productName:'',
 	 productImage:'',
 	 productRate:'',

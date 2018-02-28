@@ -168,6 +168,9 @@ export default {
   animation:all moveInLeft .6s  infinite;
   animation-timing-function: cubic-bezier(0.1,0.2,0.3,0.5);
 }*/
+#app{
+  overflow: hidden;
+}
 .fade-enter-active {
  animation :moveInLeft .3s linear ;
  animation-timing-function: cubic-bezier(0.111,0.312 ,0.548 ,0.765 );
