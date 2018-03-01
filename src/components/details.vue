@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable -->
 <transition name="fadePage">
 		<div class="details">
 	<div class="row">
@@ -9,7 +10,7 @@
 			<div class="product-detail">
 			  <div class="controls">
 			  	<h4>{{data.name}}<i class="material-icons">star_border</i> <span>5.2</span></h4>
-				<span class="heart"><i v-bind="{liked:!data.isLiked}" class="material-icons">favorite</i>{{data.like}} Like</span>
+				<span class="heart"><i v-bind="{liked:!data.isLiked}" class="material-icons">favorite_border</i>{{data.like}} Like</span>
 			  </div>
 			  <h4>Description:</h4>
 			    <p>
@@ -22,23 +23,20 @@
 					<span class="input-group-text">
 						Amount
 					</span>
-					<input type="number" class="form-control-sm" value="0" name="">
+					<input type="number" class="form-control-sm" value="1" name="">
 				</div>
 			    <button class="btn btn-default btn-block">Order</button>
 			</div>
 			</div>
 		
 		</div>
-			
 		</div>
 	</div>
 </div>
 </transition>
 </template>
 <style scoped>
-.details{
-}
-/*conponent transition*/
+/*component transition*/
 .fadePage-enter-active{
   filter:blur(60px);
   transition: .5s;
@@ -47,13 +45,12 @@
 .fadePage-leave-active{
  filter:blur(0);
 }
-.liked{
-	color: red !important;
-}
+.liked{color: red !important;}
 </style>
 <script>
-export default{
+// eslint-disable-next-line
 /* eslint-disable */
+export default{
 name:"details",
 data(){
 	return{

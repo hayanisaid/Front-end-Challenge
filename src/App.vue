@@ -13,7 +13,7 @@
       </div>
      </div>
      <div class="col-lg-6 col-md-6 col-sm-12">
-       <div class="browse">
+       <div class="browse ">
               <a class="dropdown m-2" data-toggle="dropdown" href="#">Browse  <i class="material-icons" aria-hidden="true">expand_more</i></a>
               <ul class="list-unstyled dropdown-menu">
                 <li><a href="">link</a></li>
@@ -63,7 +63,7 @@
      </div>
      <!-- navs -->
      <div class="col-lg-3 col-md-3 navs">
-       <a href="#" class="nav-link">popular <i class="material-icons">expand_more</i></a>
+       <a href="#" class="nav-link popular">popular <i class="material-icons">expand_more</i></a>
      </div>
      <div class="col-lg-6 col-md-6 navs">
        <ul class="list-inline">

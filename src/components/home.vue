@@ -6,15 +6,16 @@
              <div class="item">
                <div class="overlay"></div>
                  <i v-on:click="like(index)" v-bind:class={liked:data.isLiked} class="material-icons large">favorite_border</i>
-                 <img :src="data.image" class="img-fluid">
+                 <img :src="data.image[0]" class="img-fluid productImg">
                  <div class="controls">
-                   <a class="right" ><i class="material-icons large">chevron_right</i></a>
-                   <a class="left" ><i class="material-icons">chevron_left</i></a>
+                   <a class="right" v-on:click="next(index)"><i class="material-icons large">chevron_right</i></a>
+                   <a class="left" v-on:click="prev(index)"><i class="medium material-icons">chevron_left</i></a>
                  </div>
              </div>
             <div class="reviews">
             <h4 v-on:click="toDetail(index)">{{data.name}} <i class="material-icons">star_border</i> <span>5.2</span></h4>
              <span v-bind:class="{bounce:data.bounceAnimation}" class="review">{{data.like}}k like</span>
+             {{imgcount}}
              </div>
            </div>
          </div>
@@ -23,17 +24,26 @@
 </template>
 
 <script>
-
+/* eslint-disable */
+const vm=this;
 export default {
-  /* eslint-disable */
   name: 'home',
+
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       products:[
        {
         name:"Asiate",
-        image:require("../assets/images/product1.png"),
+        image:
+        [
+        require("../assets/images/product1.png"),
+        require("../assets/images/product2.png"),
+        require("../assets/images/product3.png"),
+        require("../assets/images/product4.png"),
+        require("../assets/images/product5.png"),
+        require("../assets/images/product6.png")
+        ],
+        imageActive:require("../assets/images/product1.png"),
         rate: 5.2,
         like:4526,
         isLiked:false,
@@ -41,7 +51,16 @@ export default {
        },
         {
         name:"Blue Hill",
-        image:require("../assets/images/product2.png"),
+        image:
+        [
+        require("../assets/images/product2.png"),
+        require("../assets/images/product1.png"),
+        require("../assets/images/product3.png"),
+        require("../assets/images/product4.png"),
+        require("../assets/images/product5.png"),
+        require("../assets/images/product6.png")
+        ],
+        imageActive:require("../assets/images/product2.png"),
         rate: 5.1,
         like:4000,
         isLiked:false,
@@ -49,7 +68,16 @@ export default {
        },
         {
         name:"Jeab-Geaorges",
-        image:require("../assets/images/product3.png"),
+        image:
+        [
+        require("../assets/images/product3.png"),
+        require("../assets/images/product1.png"),
+        require("../assets/images/product2.png"),
+        require("../assets/images/product4.png"),
+        require("../assets/images/product5.png"),
+        require("../assets/images/product6.png")
+        ],
+        imageActive:require("../assets/images/product3.png"),
         rate: 5.3,
         like:4006,
         isLiked:false,
@@ -57,7 +85,16 @@ export default {
        },
         {
         name:"Petrossian",
-        image:require("../assets/images/product4.png"),
+        image:
+        [
+        require("../assets/images/product4.png"),
+        require("../assets/images/product1.png"),
+        require("../assets/images/product3.png"),
+        require("../assets/images/product2.png"),
+        require("../assets/images/product5.png"),
+        require("../assets/images/product6.png")
+        ],
+        imageActive:require("../assets/images/product4.png"),
         rate: 5.0,
         like:670,
         isLiked:false,
@@ -65,7 +102,16 @@ export default {
        },
         {
         name:"ABC kitchen",
-        image:require("../assets/images/product5.png"),
+        image:
+        [
+        require("../assets/images/product5.png"),
+        require("../assets/images/product1.png"),
+        require("../assets/images/product3.png"),
+        require("../assets/images/product4.png"),
+        require("../assets/images/product2.png"),
+        require("../assets/images/product6.png")
+        ],
+        imageActive:require("../assets/images/product5.png"),
         rate: 5.5,
         like:362,
         isLiked:false,
@@ -73,7 +119,16 @@ export default {
        },
        {
         name:"OC",
-        image:require("../assets/images/product6.png"),
+        image:
+        [
+        require("../assets/images/product6.png"),
+        require("../assets/images/product1.png"),
+        require("../assets/images/product3.png"),
+        require("../assets/images/product4.png"),
+        require("../assets/images/product5.png"),
+        require("../assets/images/product2.png")
+        ],
+        imageActive:require("../assets/images/product6.png"),
         rate: 5.4,
         like:3620,
         isLiked:false,
@@ -98,6 +153,35 @@ export default {
       const userId=index;
       this.$router.push({name:'details' ,params:{Productid:userId}})
       //console.log(index)
+    },
+    next:function(index){
+      var count=0
+     for(let i=0 ; i <=this.products.length; i++){
+
+     
+        count++;
+        let sr=document.querySelectorAll(".productImg");
+         if(count >= this.products[i].image.length){
+            count=0
+         }
+         sr[index].src=this.products[i].image[count]
+
+    
+     }
+    },
+    prev:function(index){
+      var count=0
+      for(let i=0 ; i <=this.products.length; i++){
+        count--;
+        let sr=document.querySelectorAll(".productImg");
+        //console.log(sr[i].src)
+        if(count < 0){
+
+            count=this.products[i].image.length-1
+         }
+         sr[index].src=this.products[i].image[count]
+  
+     }
     }
   }
 }
