@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# Front-end Challanege
+
+# Front-end Challanege [Hidden Founder]
 ![image](preview/full.png)
 
 > A Vue.js project
@@ -30,9 +30,9 @@ npm test
 This template is build with vue.js and bootstrap 4,I used [vue.js](https://vuejs.org/), I can use Angular but I found Vue appropriate for this project because it's a great Framwork for UI and User Experience,so I used vue.js to handle and make nice animation,and has small size too.
 in product section I created an Array of object that contain product detail,the way that helped me to handle product displaying ,and make dynamic page with vue-router,So when use click product title ,it go you to detail component with nice transition and blur effect while diplaying product details.
 #Like feature : when you click heart icon the like will be add and the icon will take a red color,with like counter that incresse while clicking heart icon.
-### Vue.js 2
+### - Vue.js 2
 
-## Vue-cli
+## - Vue-cli
 ### [bootstrap 4](http://getbootstrap.com/)
 bootstrap 4 is latest version off twitter bootstrap ,which is  is an open source toolkit for developing with HTML, CSS, and JS.
 
@@ -75,9 +75,9 @@ I just used the necessary elments for the project to avoid loading the entire Fr
 //@import "print";
 ```
 
-### Sass
+### -Sass
 
-I used sass as CSS processor.
+I used sass as CSS processor.which make a development mush easier and some dynamizm,with a little code
 
 ## [Vue-router](https://router.vuejs.org/en/)
 
@@ -94,12 +94,17 @@ I used sass as CSS processor.
  ### Mobile Menu
 ![Mobile Menu](preview/mobileMenu.gif)
 
-### Material icons
-I used Material-icons for icons which is free icons, I prefere material-icons good for User Interface instead of fontawesome
-## Files are minified
+I made a special Menu to mobile,it appear only on mobile
 
-##  Image Carousel
+## -Material icons
+I used Material-icons for icons which is free icons, I prefere material-icons good for User Interface instead of fontawesome
+## -Files are minified
+With ``` npm run buil ``` all files are minified 
+
+##  -Image Carousel
 ![product](preview/productpred.gif)
 
+Simple Image carousel to Browse other images .
 
-[By Said Hayani]()
+
+[By Said Hayani](https://twitter.com/hayanisaid1995)
