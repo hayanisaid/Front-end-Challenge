@@ -49,7 +49,7 @@
           <li><a href="">Profile <i class="material-icons">person</i></a></li>
           <li><a href="">Orders <span class="pill">12</span></a></li>
           <li><a href="">My favorits <i class="material-icons">favorite</i></a></li>
-          <li><a href="">Logout <i class="material-icons">arrow_forward</i></a></li>
+          <li><a href="">Sign out <i class="material-icons">arrow_forward</i></a></li>
           </ul>
           </transition>
         </div>
@@ -95,11 +95,11 @@
           <li><a href="">Profile <i class="material-icons">person</i></a></li>
           <li><a href="">My cart <i class="material-icons"></i></a></li>
           <li><a href="">Setting <i class="material-icons">settings</i></a></li>
-          <li><a href="">Logout <i class="material-icons"></i></a></li>
+          <li><a href="">Sign out <i class="material-icons"></i></a></li>
           </ul>
      <div class=" navs">
        <ul class="list-inline">
-         <li><a href="#" class="nav-link">popular <i class="material-icons">expand_more</i></a></li>
+         <li><a href="#" class="nav-link">popular </a></li>
          <li class="list-inline-item"><a class="nav-link" href="#">affordable</a></li>
          <li class="list-inline-item"><a class="nav-link" href="#">fanacy</a></li>
          <li class="list-inline-item"><a class="nav-link" href="#">tips</a></li>
@@ -214,14 +214,14 @@ export default {
   }
 }
 .broswM-enter-active{
-  animation:bounce 50ms linear;
+  animation:bouncem .3ms linear;
 }
 
-@keyframes bounce{
+@keyframes bouncem{
  
   0%{
     height: 0%;
-    animation-timing-function: cubic-bezier(0.111,0.3122 ,0.548 ,0.765 );
+   
   }
   50%{
      height: 50%; 

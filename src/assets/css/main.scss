@@ -215,6 +215,9 @@ $whiteColor: #f4f4f4;
 		position: absolute;
 		top: 4em;
 		left: 16em;
+		@media (min-width: 768px)and (max-width: 1024px) {
+			left: 1em !important;
+		}
 
 		li{
 		margin-bottom: .5em;
@@ -222,6 +225,7 @@ $whiteColor: #f4f4f4;
 		transition: all .3s ease-in-out;
 		font-family: $Raleway;
 		text-decoration: none !important;
+		font-size: 14px;
 		
 	&:hover{
 		padding-left: 5px;

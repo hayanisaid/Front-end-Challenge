@@ -2,6 +2,7 @@
 # Front-end Challanege
 
 > A Vue.js project
+[image]("../src/assets/images/product1.png")
 
 ## Build Setup
 
