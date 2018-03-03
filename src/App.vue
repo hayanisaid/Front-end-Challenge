@@ -12,7 +12,7 @@
         <img src="./assets/images/image1.png" class="img-fluid">
       </div>
      </div>
-     <div class="col-lg-6 col-md-6 col-sm-12">
+     <div class="col-lg-7 col-md-6 col-sm-12">
        <div class="browse ">
               <a @click="BrowseMenu" class="dropdown m-2" data-toggle="dropdown" href="#">Browse  <i class="material-icons" aria-hidden="true">expand_more</i></a>
               <transition name="broswM">
@@ -35,7 +35,7 @@
                     </div>
         </div>
      </div>
-     <div class="col-lg-4 col-md-3 col-sm-12">
+     <div class="col-lg-3 col-md-3 col-sm-12">
       <div class="row">
       <div class="col-lg-12 col-md-12">
         <div class="header_top_right float-right">

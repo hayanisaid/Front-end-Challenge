@@ -4,7 +4,7 @@
 * Import Ralewy google font
 *
 */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway+Lobster+Two');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 
@@ -17,6 +17,7 @@ $mainColor:#273042;
 $fontColor:#666;
 $Raleway:"Raleway";
 $whiteColor: #f4f4f4;
+$Lobster:"Lobster";
 .box-shadow{
 	box-shadow:0 0 10px #ccc;
 }
@@ -269,7 +270,7 @@ $whiteColor: #f4f4f4;
 
 	.header_description{
 		@media (min-width: 768px) {
-		 padding:7em 2em;
+		 padding:7em 1em;
         }
          padding: 1em 3em;
 		/* Title  */
@@ -277,17 +278,25 @@ $whiteColor: #f4f4f4;
 		.title{
 		  
 		h3{
-			color: #E7E9DE;
-			font-family: $Raleway;
-			font-size: 47px;
+			color: #fff;
+			font-family: $Lobster;
+			font-weight: bold;
+			font-size: 4em;
 			letter-spacing: 2px;
 			word-spacing: 5px;
+			@media (min-width: 768px)and (max-width: 1024px) {
+			 font-size: 4em !important;	
+			}
+			@media (max-width: 768px) {
+			font-size: 3em;	
+			}
 		}
 		}
 
 		p{
 			color:#E7E9DE;
 			font-family: $Raleway;
+			font-weight: bold;
 			
 		}
 		span{
@@ -574,7 +583,7 @@ margin-bottom: 20px;
 				padding: 1em;
 				font-family: $Raleway;
 				@media (max-width: 768px) {
-				width: 100%;	
+				width: 14em;	
 				}
 				@media (min-width: 768px)and (max-width: 1024px) {
 				width: 10em;
@@ -587,7 +596,7 @@ margin-bottom: 20px;
 				}
 			}
 			input[type=text]::placeholder{
-				color: #666;
+				color:$fontColor;
 				font-family: $Raleway;
 				font-size: 14px;
 			}
@@ -607,11 +616,11 @@ margin-bottom: 20px;
 			span{
 				position: absolute;
 				&:nth-child(1){
-					right: 0;
+					right: 10em;
 					top: 9em;
 				}
 				&:nth-child(2){
-					right: 1em;
+					right: 7em;
 					top: 14em;
 				}
 				&:nth-child(3){

@@ -2,7 +2,6 @@
 # Front-end Challanege
 
 > A Vue.js project
-[image]("../src/assets/images/product1.png")
 
 ## Build Setup
 
@@ -26,7 +25,17 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
+***Tools used in this project
+-Vue.js 2
+- Vue-cli
+-bootstrap 4
+< I used the only element that I need not all the Framework
+
+-Sass
+< I used sass as CSS processor
+- Vue-router
+< I used Vue-router ,So the user can navigate to detail page without page refresh with a nice animation effect
+- The template is responsive
+- Create a mobile menu
 # Front-end-Challenge
 >>>>>>> 33e69fbedb45a977e3d8481655afb7b7e8ac37c4
