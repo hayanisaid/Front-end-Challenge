@@ -550,10 +550,13 @@ margin-bottom: 20px;
 	.map{
 		position: relative;
 		overflow: hidden;
-		img{
+		iframe{
 			height: 100%;
 			width: 100%;
 			object-fit:cover;
+			.gm-style .place-card-medium{
+				display: none !important;
+			}
 
 		}
 		.form-search{
@@ -582,6 +585,7 @@ margin-bottom: 20px;
 				width: 19em;
 				padding: 1em;
 				font-family: $Raleway;
+				@include box-shadow(0 0 10px #ccc);
 				@media (max-width: 768px) {
 				width: 14em;	
 				}

@@ -134,7 +134,16 @@
          <span><img src="./assets/images/marker.png" class="img-fluid"></span>
          <span><img src="./assets/images/marker.png" class="img-fluid"></span>
        </div>
-       <img src="./assets/images/map.png" class="img-fluid">
+      <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCa6gBqIZj7SbyFcWO-FOuIU_6kO5IVOHk
+      &q=Fairmont+Empress,Victoria+BC
+      &attribution_source=Google+Maps+Embed+API
+      &attribution_web_url=http://www.fairmont.com/empress-victoria/
+      &attribution_ios_deep_link_id=comgooglemaps://?daddr=Fairmont+Empress,+Victoria,+BC" allowfullscreen>
+        </iframe>
        </div>
      </div>
    </div>
