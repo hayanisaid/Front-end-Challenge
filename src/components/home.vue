@@ -1,3 +1,4 @@
+ <!-- eslint-disable -->
 <template>
 <div class="home">
    <div class="products"><!-- main page -->
@@ -6,14 +7,16 @@
              <div class="item">
                <div class="overlay"></div>
                  <i v-on:click="like(index)" v-bind:class={liked:data.isLiked} class="material-icons large">favorite_border</i>
-                 <img :src="data.image[0]" class="img-fluid productImg">
+                 <transition name="fade">
+                   <img :src="data.image[data.currentImage % data.image.length]" class="img-fluid productImg">
+                 </transition>
                  <div class="controls">
-                   <a class="right" v-on:click="next(index)"><i class="material-icons large">chevron_right</i></a>
-                   <a class="left" v-on:click="prev(index)"><i class="medium material-icons">chevron_left</i></a>
+                   <a class="right" @click="next(index)"><i class="material-icons large">chevron_right</i></a>
+                   <a class="left" @click="prev(index)"><i class="medium material-icons">chevron_left</i></a>
                  </div>
              </div>
             <div class="reviews">
-            <h4 v-on:click="toDetail(index)">{{data.name}} <i class="material-icons">star_border</i> <span>5.2</span></h4>
+            <h4 @click="toDetail(index)">{{data.name}} <i class="material-icons">star_border</i> <span>5.2</span></h4>
              <span v-bind:class="{bounce:data.bounceAnimation}" class="review">{{data.like}}k like</span>
              
              </div>
@@ -31,6 +34,7 @@ export default {
 
   data () {
     return {
+      
       products:[
        {
         name:"Asiate",
@@ -43,7 +47,7 @@ export default {
         require("../assets/images/product5.png"),
         require("../assets/images/product6.png")
         ],
-        imageActive:require("../assets/images/product1.png"),
+        currentImage:0,
         rate: 5.2,
         like:4526,
         isLiked:false,
@@ -60,7 +64,7 @@ export default {
         require("../assets/images/product5.png"),
         require("../assets/images/product6.png")
         ],
-        imageActive:require("../assets/images/product2.png"),
+        currentImage:0,
         rate: 5.1,
         like:4000,
         isLiked:false,
@@ -77,7 +81,7 @@ export default {
         require("../assets/images/product5.png"),
         require("../assets/images/product6.png")
         ],
-        imageActive:require("../assets/images/product3.png"),
+        currentImage:0,
         rate: 5.3,
         like:4006,
         isLiked:false,
@@ -94,7 +98,7 @@ export default {
         require("../assets/images/product5.png"),
         require("../assets/images/product6.png")
         ],
-        imageActive:require("../assets/images/product4.png"),
+        currentImage:0,
         rate: 5.0,
         like:670,
         isLiked:false,
@@ -111,7 +115,7 @@ export default {
         require("../assets/images/product2.png"),
         require("../assets/images/product6.png")
         ],
-        imageActive:require("../assets/images/product5.png"),
+        currentImage:0,
         rate: 5.5,
         like:362,
         isLiked:false,
@@ -128,7 +132,7 @@ export default {
         require("../assets/images/product5.png"),
         require("../assets/images/product2.png")
         ],
-        imageActive:require("../assets/images/product6.png"),
+        currentImage:0,
         rate: 5.4,
         like:3620,
         isLiked:false,
@@ -155,32 +159,23 @@ export default {
       //console.log(index)
     },
     next:function(index){
-      var count=0
+      
      for(let i=0 ; i <=this.products.length; i++){
-
-     
-        count++;
-        let sr=document.querySelectorAll(".productImg");
-         if(count >= this.products[i].image.length){
-            count=0
-         }
-         sr[index].src=this.products[i].image[count]
-
-    
+       if(index===i){
+        this.products[index].currentImage+=1
+       }
      }
     },
     prev:function(index){
-      var count=0
+      
       for(let i=0 ; i <=this.products.length; i++){
-        count--;
-        let sr=document.querySelectorAll(".productImg");
-        //console.log(sr[i].src)
-        if(count < 0){
-
-            count=this.products[i].image.length-1
-         }
-         sr[index].src=this.products[i].image[count]
-  
+      if(index===i){
+        this.products[index].currentImage-=1
+        if(this.products[index].currentImage < 0){
+          this.products[index].currentImage=this.products[index].image.length
+        }
+        
+      }  
      }
     }
   }
@@ -213,6 +208,19 @@ export default {
   }
    100%{
     transform: scale(1)
+  }
+}
+.fade-enter{
+  animation:fadeImg .3s linear;
+}
+@keyframes fadeImg{
+  0%{
+    opacity: 0;
+    transform: scale(1);
+  }
+    100%{
+    opacity: 1;
+    transform: scale(0);
   }
 }
 </style>

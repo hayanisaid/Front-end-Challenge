@@ -1,3 +1,4 @@
+ <!-- eslint-disable -->
 <template>
   <div id="app">
     <!-- Header -->
@@ -33,7 +34,7 @@
                         6 M FOLLOWERS
                       </span>
                     </div>
-        </div>
+                    </div>
      </div>
      <div class="col-lg-3 col-md-3 col-sm-12">
       <div class="row">
