@@ -15,7 +15,7 @@
             <div class="reviews">
             <h4 v-on:click="toDetail(index)">{{data.name}} <i class="material-icons">star_border</i> <span>5.2</span></h4>
              <span v-bind:class="{bounce:data.bounceAnimation}" class="review">{{data.like}}k like</span>
-             {{imgcount}}
+             
              </div>
            </div>
          </div>

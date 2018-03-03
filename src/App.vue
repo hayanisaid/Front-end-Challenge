@@ -14,13 +14,15 @@
      </div>
      <div class="col-lg-6 col-md-6 col-sm-12">
        <div class="browse ">
-              <a class="dropdown m-2" data-toggle="dropdown" href="#">Browse  <i class="material-icons" aria-hidden="true">expand_more</i></a>
-              <ul class="list-unstyled dropdown-menu">
-                <li><a href="">link</a></li>
-                <li><a href="">link</a></li>
-                <li><a href="">link</a></li>
-                <li><a href="">link</a></li>
+              <a @click="BrowseMenu" class="dropdown m-2" data-toggle="dropdown" href="#">Browse  <i class="material-icons" aria-hidden="true">expand_more</i></a>
+              <transition name="broswM">
+                 <ul v-show="BrowseMenuState" class="list-unstyled dropdown-menu">
+                <li><a href="">Popular</a></li>
+                <li><a href="">Tips</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">Fanacy</a></li>
               </ul>
+              </transition>
         </div>
         <div class="header_description">
           <div class="title">
@@ -40,14 +42,16 @@
           <i class="material-icons">notifications</i>
           <i class="material-icons">favorite</i>
           <img src="./assets/images/image2.png" class="img-fluid">
-          <a class="dropdown" data-toggle="dropdown" href="#">
+          <a @click="openUserMenu" class="dropdown" data-toggle="dropdown" href="#">
           <i class="material-icons" aria-hidden="true">expand_more</i></a>
-          <ul class="list-unstyled dropdown-menu">
+          <transition name="userM">
+             <ul v-show="UserMenuState" class="list-unstyled dropdown-menu">
           <li><a href="">Profile <i class="material-icons">person</i></a></li>
-          <li><a href="">My cart <i class="material-icons"></i></a></li>
-          <li><a href="">Setting <i class="material-icons">settings</i></a></li>
-          <li><a href="">Logout <i class="material-icons"></i></a></li>
+          <li><a href="">Orders <span class="pill">12</span></a></li>
+          <li><a href="">My favorits <i class="material-icons">favorite</i></a></li>
+          <li><a href="">Logout <i class="material-icons">arrow_forward</i></a></li>
           </ul>
+          </transition>
         </div>
         <div class="menu_lancher">
           <span  @click="MobileMenuState= !MobileMenuState" :aria-pressed="MobileMenuState?'true':'false'" class="open"><i class="material-icons">menu</i></span>
@@ -146,8 +150,10 @@ export default {
    
    data (){
    return{
-    MenuOpened:false,
-   MobileMenuState:false
+    MenuOpened     :false,
+    MobileMenuState:false,
+    BrowseMenuState:false,
+    UserMenuState  :false  
    }
   
    },
@@ -158,6 +164,12 @@ export default {
     openMenu(){
       this.MobileMenuState=(this.MobileMenuState===false)?true:false
       console.log('opened')
+    },
+    BrowseMenu:function(){
+      this.BrowseMenuState=(this.BrowseMenuState===false)?true:false
+    },
+    openUserMenu:function(){
+      this.UserMenuState=(this.UserMenuState===false)?true:false
     }
    }
 }
@@ -199,6 +211,38 @@ export default {
   }
   .MenuOpened{
     background: red !important;
+  }
+}
+.broswM-enter-active{
+  animation:bounce 50ms linear;
+}
+
+@keyframes bounce{
+ 
+  0%{
+    height: 0%;
+    animation-timing-function: cubic-bezier(0.111,0.3122 ,0.548 ,0.765 );
+  }
+  50%{
+     height: 50%; 
+  }
+  100%{
+     height: 100%;
+  }
+}
+.userM-enter-active
+{
+  animation:fadeInRight .3s linear;
+}
+@keyframes fadeInRight{
+  0%{
+    transform: translateX(300px);
+  }
+  50%{
+    transform: translateX(50px);
+  }
+  100%{
+    transform: translateX(0px);
   }
 }
 

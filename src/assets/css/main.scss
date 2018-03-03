@@ -153,20 +153,29 @@ $whiteColor: #f4f4f4;
 	}
 	}
 	.dropdown-menu{
-	right: 253px;
-	left: auto;
 	background: #273042;
 	top: 28px;
 	position: absolute;
-	left: -78px;
+	display: block;
+	left: 11em;
+	top: 2.5em;
+	padding: 1em;
+	transition: .3s;
+	tanimation-timing-function: cubic-bezier(0.111,0.312 ,0.548 ,0.765 );
+	li{
+		margin-bottom: 1em;
 		a{
-		transition: all .3s ease-in-out;
+		transition: all .1s ease-in-out;
+		font-family: $Raleway;
+		margin-left: 0 !important;
 			&:hover{
-			padding-left: 15px;
+			padding-left: 2px;
 			color:#C0C5CD; 
 			background: #273042;
 			}
 		}
+	 }
+		
 	 }
 		
    
@@ -200,16 +209,35 @@ $whiteColor: #f4f4f4;
 		border-radius: 50%;
 	}
 	.dropdown-menu{
-
 		background: #273042;
-	a{
+		display: block;
+		padding: 1em;
+		position: absolute;
+		top: 4em;
+		left: 16em;
+
+		li{
+		margin-bottom: .5em;
+		a{
 		transition: all .3s ease-in-out;
+		font-family: $Raleway;
+		text-decoration: none !important;
+		
 	&:hover{
-		padding-left: 15px;
+		padding-left: 5px;
 		color:#C0C5CD; 
 		background: none;
 	}
+	.pill{
+		background: #f4f4f4;
+		color:#273042;
+		border-radius: 50%;
+		padding: 5px;
+		width: 2em;
+		height: 2em; 
+	}
 	}	
+		}	
 
 	}
 	
