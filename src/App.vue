@@ -127,6 +127,12 @@
          </div>
          <input type="text" class="form-control" name="search" placeholder="Search for an address">
        </div>
+       <div class="markers">
+         <span><img src="./assets/images/marker.png" class="img-fluid"></span>
+         <span><img src="./assets/images/marker.png" class="img-fluid"></span>
+         <span><img src="./assets/images/marker.png" class="img-fluid"></span>
+         <span><img src="./assets/images/marker.png" class="img-fluid"></span>
+       </div>
        <img src="./assets/images/map.png" class="img-fluid">
        </div>
      </div>
