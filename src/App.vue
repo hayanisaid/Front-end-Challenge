@@ -139,7 +139,7 @@
       height="450"
       frameborder="0" style="border:0"
       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCa6gBqIZj7SbyFcWO-FOuIU_6kO5IVOHk
-      &q=Fairmont+Empress,Victoria+BC
+      &q=Manhattan+BridgeNew+York,NY
       &attribution_source=Google+Maps+Embed+API
       &attribution_web_url=http://www.fairmont.com/empress-victoria/
       &attribution_ios_deep_link_id=comgooglemaps://?daddr=Fairmont+Empress,+Victoria,+BC" allowfullscreen>
@@ -169,7 +169,8 @@ export default {
     MenuOpened     :false,
     MobileMenuState:false,
     BrowseMenuState:false,
-    UserMenuState  :false  
+    UserMenuState  :false ,
+     
    }
   
    },

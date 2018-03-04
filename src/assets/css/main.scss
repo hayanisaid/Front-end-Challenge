@@ -42,7 +42,7 @@ $Lobster:"Lobster";
 .header{
 	@media (min-width: 768px){
 	overflow: hidden;
-	height: 500px;	
+	height: 514px;	
 	}
 
     background-image: url("../images/background.png");
@@ -554,9 +554,6 @@ margin-bottom: 20px;
 			height: 100%;
 			width: 100%;
 			object-fit:cover;
-			.gm-style .place-card-medium{
-				display: none !important;
-			}
 
 		}
 		.form-search{
@@ -566,6 +563,7 @@ margin-bottom: 20px;
 				position: relative;
 				top: 1em;
 				left: 1em;
+				display: block;
 				@media (min-width: 768px)and (max-width: 1024px) {
 				    left: 4px;
 				}
@@ -585,7 +583,6 @@ margin-bottom: 20px;
 				width: 19em;
 				padding: 1em;
 				font-family: $Raleway;
-				@include box-shadow(0 0 10px #ccc);
 				@media (max-width: 768px) {
 				width: 14em;	
 				}
